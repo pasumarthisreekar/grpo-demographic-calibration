@@ -1,0 +1,25 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Model outputs / weights (large binary files)
+llama-grpo-outputs/
+llama-grpo-final/
+*.safetensors
+*.bin
+
+# Raw survey source data (GSS/ANES source files can be large; keep derived JSON/JSONL small outputs)
+data/gss.csv
+data/anes_timeseries_2020_csv_20220210.csv
+data/anes_timeseries_2020_redactedopenends_excel_20211118.xlsx
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS
+.DS_Store

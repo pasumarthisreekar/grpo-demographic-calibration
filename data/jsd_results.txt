@@ -1,0 +1,101 @@
+
+================================================================================
+🏆 FINAL STRICT JENSEN-SHANNON DIVERGENCE (JSD) BENCHMARK REPORT
+================================================================================
+Note: JSD measures probability distribution distance. 0.0 is perfect alignment.
+      *Refusals are mathematically appended as the final category in the distributions.*
+
+📌 TEST 1 | Urban_High_Income
+  Question: You are a member of the Urban High Income demographic in the...
+  Stances: ['No', 'Yes', 'Refusals']
+  Target Dist:   [0.647, 0.353, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.4569 | Dist: [0.062, 0.938, 0.0]
+  GRPO Model JSD: 0.0161 | Dist: [0.625, 0.375, 0.0]
+  ✅ GRPO improved calibration by 96.5%
+
+📌 TEST 2 | Rural_Working_Class
+  Question: You are a member of the Rural Working Class demographic in t...
+  Stances: ['No', 'Yes', 'Refusals']
+  Target Dist:   [0.651, 0.349, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.5547 | Dist: [0.0, 1.0, 0.0]
+  GRPO Model JSD: 0.4990 | Dist: [0.031, 0.969, 0.0]
+  ✅ GRPO improved calibration by 10.0%
+
+📌 TEST 3 | Urban_High_Income
+  Question: You are a member of the Urban High Income demographic in the...
+  Stances: ['Too much', 'About right', 'Too little', 'Refusals']
+  Target Dist:   [0.462, 0.365, 0.172, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.3838 | Dist: [0.719, 0.0, 0.281, 0.0]
+  GRPO Model JSD: 0.1835 | Dist: [0.312, 0.312, 0.344, 0.031]
+  ✅ GRPO improved calibration by 52.2%
+
+📌 TEST 4 | Rural_Working_Class
+  Question: You are a member of the Rural Working Class demographic in t...
+  Stances: ['About right', 'Too much', 'Too little', 'Refusals']
+  Target Dist:   [0.351, 0.351, 0.298, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.4617 | Dist: [0.0, 0.906, 0.094, 0.0]
+  GRPO Model JSD: 0.2684 | Dist: [0.062, 0.594, 0.344, 0.0]
+  ✅ GRPO improved calibration by 41.9%
+
+📌 TEST 5 | Urban_High_Income
+  Question: You are a member of the Urban High Income demographic in the...
+  Stances: ['Inspired word', 'Book of fables', 'Actual word', 'Refusals']
+  Target Dist:   [0.449, 0.347, 0.205, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.3662 | Dist: [0.219, 0.781, 0.0, 0.0]
+  GRPO Model JSD: 0.2842 | Dist: [0.469, 0.531, 0.0, 0.0]
+  ✅ GRPO improved calibration by 22.4%
+
+📌 TEST 6 | Rural_Working_Class
+  Question: You are a member of the Rural Working Class demographic in t...
+  Stances: ['Actual word', 'Inspired word', 'Book of fables', 'Refusals']
+  Target Dist:   [0.504, 0.335, 0.161, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.3257 | Dist: [0.875, 0.125, 0.0, 0.0]
+  GRPO Model JSD: 0.2769 | Dist: [0.406, 0.594, 0.0, 0.0]
+  ✅ GRPO improved calibration by 15.0%
+
+📌 TEST 7 | Urban_High_Income
+  Question: You are a member of the Urban High Income demographic in the...
+  Stances: ['Not wrong at all', 'Wrong only sometimes', 'Always wrong', 'Almost always wrong', 'Refusals']
+  Target Dist:   [0.673, 0.164, 0.119, 0.044, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.2495 | Dist: [0.75, 0.25, 0.0, 0.0, 0.0]
+  GRPO Model JSD: 0.1390 | Dist: [0.781, 0.125, 0.094, 0.0, 0.0]
+  ✅ GRPO improved calibration by 44.3%
+
+📌 TEST 8 | Rural_Working_Class
+  Question: You are a member of the Rural Working Class demographic in t...
+  Stances: ['Not wrong at all', 'Always wrong', 'Wrong only sometimes', 'Almost always wrong', 'Refusals']
+  Target Dist:   [0.469, 0.289, 0.169, 0.072, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.4555 | Dist: [0.0, 0.656, 0.188, 0.156, 0.0]
+  GRPO Model JSD: 0.4153 | Dist: [0.031, 0.75, 0.188, 0.031, 0.0]
+  ✅ GRPO improved calibration by 8.8%
+
+📌 TEST 9 | Urban_High_Income
+  Question: You are a member of the Urban High Income demographic in the...
+  Stances: ['Only some', 'Hardly any', 'Great deal', 'Refusals']
+  Target Dist:   [0.472, 0.37, 0.158, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.4261 | Dist: [0.469, 0.0, 0.531, 0.0]
+  GRPO Model JSD: 0.1683 | Dist: [0.5, 0.188, 0.312, 0.0]
+  ✅ GRPO improved calibration by 60.5%
+
+📌 TEST 10 | Rural_Working_Class
+  Question: You are a member of the Rural Working Class demographic in t...
+  Stances: ['Hardly any', 'Only some', 'Great deal', 'Refusals']
+  Target Dist:   [0.465, 0.409, 0.126, 0.0]
+------------------------------------------------------------
+  Base Model JSD: 0.4851 | Dist: [1.0, 0.0, 0.0, 0.0]
+  GRPO Model JSD: 0.2404 | Dist: [0.688, 0.312, 0.0, 0.0]
+  ✅ GRPO improved calibration by 50.5%
+
+================================================================================
+📈 AVERAGE BASE JSD: 0.4165
+📉 AVERAGE GRPO JSD: 0.2491
+================================================================================
