@@ -4,13 +4,10 @@ import google.generativeai as genai
 # Configure Gemini (Make sure you set the GEMINI_API_KEY environment variable)
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
-# ==========================================
-# 1. GEMINI: THE HARDENED CLASSIFIER
-# ==========================================
+
 def classify_text_with_gemini(text, valid_stances, question_text):
     valid_stances_str = ", ".join([f'"{s}"' for s in valid_stances])
     
-    # 🚨 THE ANTI-HACKING PROMPT
     prompt = f"""
     You are a strict text classification evaluator for a Reinforcement Learning pipeline. 
     A simulated user was asked: "{question_text}"
@@ -75,7 +72,6 @@ def distribution_reward_func(prompts, completions, ground_truth_distribution, **
     rewards = []
     for label in observed_labels:
         if label == "Refusal":
-            # 🚨 Instantly kills AI refusals AND gibberish/keyword spam
             rewards.append(-1.0) 
         else:
             target_prob = target_dist.get(label, 0.0)
@@ -83,7 +79,6 @@ def distribution_reward_func(prompts, completions, ground_truth_distribution, **
             
             if observed_prob > 0:
                 reward = (target_prob / observed_prob) - 1.0
-                # 🚨 Prevents gradient explosion
                 reward = max(-1.0, min(reward, 1.0))
                 rewards.append(reward)
             else:
